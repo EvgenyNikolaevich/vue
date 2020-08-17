@@ -221,13 +221,13 @@ https://opentdb.com/api_config.php , где нужно сгенерироват�
 
 *Пример интерфейса приложения (вы можете выбрать своё оформление)*
 <p align="center">
-  <a href="https://ibb.co/8MGHW2w"><img src="https://i.ibb.co/8MGHW2w/1.png" alt="1" border="0">
+  <a href="https://ibb.co/8MGHW2w"><img src="https://i.ibb.co/8MGHW2w/1.png" target="_blank" alt="1">
     рис.1
   </a>
-  <a href="https://ibb.co/9tCGjwB"><img src="https://i.ibb.co/9tCGjwB/2.png" alt="2" border="0">
+  <a href="https://ibb.co/9tCGjwB"><img src="https://i.ibb.co/9tCGjwB/2.png" target="_blank" alt="2">
     рис.2
   </a>
-  <a href="https://ibb.co/7v7sKyv"><img src="https://i.ibb.co/7v7sKyv/3.png" alt="3" border="0">
+  <a href="https://ibb.co/7v7sKyv"><img src="https://i.ibb.co/7v7sKyv/3.png" target="_blank" alt="3">
     рис.3
   </a>
 </p>

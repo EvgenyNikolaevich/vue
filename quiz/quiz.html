@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Document</title>
+    <link rel="stylesheet" href="quiz.css">
+  </head>
+  <body>
+    <div id="quiz">
+      <div id="question">
+        <p></p>
+      </div>
+      <div id="answers_container">
+      </div>
+      <a href="#" id="send_answer_button" hidden="true" disabled>
+        Send answer.
+      </a>
+      <div id="quiz_result" hidden="true">
+        <p id="correct_answers">Quantity of correct answers is: </p>
+        <p id="incorrect_answers">Quantity of incorrect answers is: </p>
+      </div>
+      <a href="#" id="start_quiz_button">
+        Start Quiz!
+      </a>
+      <a href="#" id="restart_quiz_button" hidden="true">
+         Try again!
+      </a>
+    </div>
+    <script type="module" src="script/quiz.js"></script>
+  </body>
+</html>

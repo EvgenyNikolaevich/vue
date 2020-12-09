@@ -1,0 +1,27 @@
+{
+  "name": "vue_study",
+  "version": "1.0.0",
+  "description": "Javascript тренинги",
+  "private": true,
+  "dependencies": {
+    "lodash": "^4.17.20"
+  },
+  "devDependencies": {
+    "webpack": "^5.6.0",
+    "webpack-cli": "^4.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EvgenyNikolaevich/vue_study.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EvgenyNikolaevich/vue_study/issues"
+  },
+  "homepage": "https://github.com/EvgenyNikolaevich/vue_study#readme"
+}

@@ -9,6 +9,13 @@ body {
     justify-content: center;
 }
 
+#return_back_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8px 14px;
+}
+
 #restart_quiz_button {
     display: flex;
     align-items: center;

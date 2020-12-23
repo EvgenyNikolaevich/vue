@@ -5,6 +5,8 @@ import { QuizState } from './quiz_state.js';
 const startQuizButton = document.getElementById('start_quiz_button');
 const sendAnswerButton = document.getElementById('send_answer_button');
 const restartQuizButton = document.getElementById('restart_quiz_button');
+const returnBackButton = document.getElementById('return_back_button');
+
 const questionElement = document.querySelector('#question p');
 
 let correctAnswersCount = 0;
@@ -52,6 +54,49 @@ function updateAnswers(numberOfQuestion, quizState, checkedAnswer) {
     quizState.increaseCount();
 }
 
+function updateAnswersBack(numberOfQuestion, quizState, checkedAnswer) {
+    quizState.decreaseCount();
+
+    const currentState = quizState.getState();
+
+    let count = quizState.getCount();
+    let currentAnswers = currentState.getAnswersObject();
+    let currentQuestion = currentState.getQuestion();
+    let previousCount, previousAnswers;
+
+    currentAnswers.showRadioButtons(count);
+
+    if (count) {
+        previousCount = count;
+        previousAnswers = quizState.getStateByIndex(previousCount).getAnswersObject();
+
+        previousAnswers.hideRadioButtons(previousCount);
+
+        if (previousAnswers.getAnswerCorrectness(checkedAnswer)) {
+            correctAnswersCount -= 1;
+        }
+    }
+
+
+    if (count < numberOfQuestion) {
+        sendAnswerButton.removeAttribute('hidden');
+        questionElement.innerHTML = currentQuestion;
+    }
+
+    if (count === numberOfQuestion - 1) {
+        const resultElement = document.getElementById('quiz_result');
+
+        resultElement.hidden = false;
+        questionElement.hidden = true;
+        restartQuizButton.hidden = false;
+
+        sendAnswerButton.setAttribute('hidden', true);
+
+        currentAnswers.update(count, correctAnswersCount, numberOfQuestion);
+        currentAnswers.hideRadioButtons(count);
+    }
+}
+
 
 function initQuiz(results) {
     const quizState = new QuizState(results);
@@ -63,6 +108,11 @@ function initQuiz(results) {
         const checkedAnswer = document.querySelector('input[name="answers"]:checked').value;
 
         updateAnswers(results.length, quizState, checkedAnswer);
+
+        returnBackButton.removeAttribute('hidden');
+        returnBackButton.onclick = function(event) {
+            updateAnswersBack(results.length, quizState, checkedAnswer);
+        };
     };
 }
 

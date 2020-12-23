@@ -12,6 +12,10 @@ export class QuizState {
         this.count += 1;
     }
 
+    decreaseCount() {
+        this.count -= 1;
+    }
+
     getCount() {
         return this.count;
     }

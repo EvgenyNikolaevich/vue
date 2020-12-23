@@ -35,6 +35,12 @@ export class Answers {
         });
     }
 
+    showRadioButtons(id) {
+        const answersDiv = document.getElementById(`answers_${id}`);
+
+        answersDiv.setAttribute('hidden', false);
+    }
+
     hideRadioButtons(id) {
         const answersDiv = document.getElementById(`answers_${id}`);
 
